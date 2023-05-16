@@ -4,7 +4,7 @@ import database from  './database.js';
 const Category = database.define('category',{
     id: {
         type: Sequelize.INTEGER,
-        autoIncerement: true,
+        autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
