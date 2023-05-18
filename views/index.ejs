@@ -30,10 +30,11 @@
                             <% for(let category of categories){%>
                                 <tr>
                                     <td><%= category.id %></td>
-                                    <td><img src="<%= category.CategoryMainImage %>" alt="" style="height: 50px;"></td>
-                                    <td><%= category.CategoryName %></td>
+                                    <td><a href="/products/<%= category.id %>"><img src="<%= category.CategoryMainImage %>" alt="" style="height: 50px;"></a></td>
+                                    <td ><a href="/products/<%= category.id %>"><%= category.CategoryName %></a></td>
                                     <td>
-                                        <a href="/functions/delete_category/<%= category.id %>" class="btn btn-danger">Delete</a>
+                                        <form action="delete_category" method="post"></form>
+                                        <a href="/delete_category/<%= category.id %>" class="btn btn-danger">Delete</a>
                                         <a href="/functions/edit_category/<%= category.id %>" class="btn btn-warning">Edit</a>
                                     </td>
                                 </tr>

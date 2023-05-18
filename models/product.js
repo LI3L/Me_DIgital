@@ -4,7 +4,7 @@ import database from  './database.js';
 const product = database.define('product',{
     id: {
         type: Sequelize.INTEGER,
-        autoIncerement: true,
+        autoIncrement: true,
         allowNull: false,
         primaryKey: true
     },
@@ -14,6 +14,7 @@ const product = database.define('product',{
     productDescription: Sequelize.TEXT,
     isAvailable: Sequelize.BOOLEAN,
     unitInStock: Sequelize.INTEGER,
+    categoryId:Sequelize.INTEGER
 })
 
 export default product;
