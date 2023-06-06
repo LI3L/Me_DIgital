@@ -1,20 +1,23 @@
-import Sequelize from "sequelize";
-import database from  './database.js';
+import sequelize from "sequelize";
+import database from "./database.js";
 
-const product = database.define('product',{
-    id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        allowNull: false,
-        primaryKey: true
+const Product= database.define("product",{
+    id:{
+        type:sequelize.INTEGER,
+        autoIncrement:true,
+        allowNull:false,
+        primaryKey:true
+
     },
-    productName: Sequelize.STRING,
-    productPrice: Sequelize.DOUBLE,
-    productMainImage: Sequelize.STRING,
-    productDescription: Sequelize.TEXT,
-    isAvailable: Sequelize.BOOLEAN,
-    unitInStock: Sequelize.INTEGER,
-    categoryId:Sequelize.INTEGER
-})
+    productname:sequelize.STRING,
+    productprice:sequelize.DOUBLE,
+    productImage:sequelize.STRING,
+    productDescription: sequelize.TEXT,
+    isAvailable:sequelize.BOOLEAN,
+    unitInStock:sequelize.INTEGER,
+    CategoryId: sequelize.INTEGER
 
-export default product;
+});
+
+
+export default Product;

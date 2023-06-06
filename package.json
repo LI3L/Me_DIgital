@@ -1,18 +1,20 @@
 {
-  "name": "me_digital",
+  "name": "medigital",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "url": "git+https://github.com/LI3L/Me_DIgital.git",
     "start": "nodemon index.js"
   },
+  
+
+
   "keywords": [],
   "author": "",
   "license": "ISC",
+
   "dependencies": {
     "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
